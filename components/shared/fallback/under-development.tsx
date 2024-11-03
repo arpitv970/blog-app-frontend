@@ -11,7 +11,7 @@ export const UnderDevelopment: React.FC<IUnderDevelopmen> = ({
 }) => {
   return (
     <div className={cn("", className)}>
-      <p className="text-3xl lg:text-4xl text-pretty font-bold lg:font-black font-serif tracking-tight lg:tracking-tighter">
+      <p className="text-3xl lg:text-4xl font-bold lg:font-black font-serif tracking-tighter text-center text-nowrap">
         🚧 Under Development
       </p>
       {children ? (
