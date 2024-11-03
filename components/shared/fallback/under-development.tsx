@@ -11,13 +11,13 @@ export const UnderDevelopment: React.FC<IUnderDevelopmen> = ({
 }) => {
   return (
     <div className={cn("", className)}>
-      <p className="text-4xl font-black font-serif tracking-tighter">
+      <p className="text-3xl lg:text-4xl text-pretty font-bold lg:font-black font-serif tracking-tight lg:tracking-tighter">
         🚧 Under Development
       </p>
       {children ? (
-        <div className="my-3">
+        <div className="my-3 px-5">
           <Separator />
-          <div className="my-3 tracking-wide font-mono text-center mx-auto">
+          <div className="my-3 tracking-wide font-mono text-center mx-auto flex flex-wrap justify-center items-center gap-3">
             {children}
           </div>
         </div>
