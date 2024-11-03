@@ -6,7 +6,12 @@ interface IBrandLogo {
 
 export const BrandLogo: React.FC<IBrandLogo> = ({ className }) => {
   return (
-    <span className={cn("text-3xl font-black tracking-tighter", className)}>
+    <span
+      className={cn(
+        "text-3xl font-black tracking-tighter font-serif",
+        className,
+      )}
+    >
       Blogs
     </span>
   );

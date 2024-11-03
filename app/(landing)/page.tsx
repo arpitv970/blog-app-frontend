@@ -3,6 +3,7 @@ import { ShinyButton } from "@/components/shared/shiny-button";
 import { H1 } from "@/components/shared/typography/headers";
 import { Button } from "@/components/ui/button";
 import { CheckIcon } from "lucide-react";
+import { DemoScreen } from "./_components/demo-screen";
 
 const LandingHomePage = () => {
   return (
@@ -42,15 +43,24 @@ const LandingHomePage = () => {
               ))}
             </ul>
             <div>
-              <ShinyButton>Get Started</ShinyButton>
+              <ShinyButton className="bg-gradient-to-bl from-violet-500 to-violet-900 transition-all shadow-xl hover:shadow-2xl">
+                Get Started
+              </ShinyButton>
             </div>
           </div>
         </MaxWidthWrapper>
       </section>
 
       {/* Demo Screen / Video / Graphics */}
-      <section>
-        <MaxWidthWrapper>Demo Screen</MaxWidthWrapper>
+      <section className="relative bg-background/5 pb-4">
+        <div className="absolute inset-x-0 bottom-24 top-24 bg-primary" />
+        <div className="relative mx-auto">
+          <MaxWidthWrapper className="relative">
+            <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+              <DemoScreen />
+            </div>
+          </MaxWidthWrapper>
+        </div>
       </section>
     </>
   );
