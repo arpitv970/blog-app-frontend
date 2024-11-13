@@ -4,7 +4,14 @@ builder.prismaObject("Blog", {
   fields: (t) => ({
     id: t.exposeID("id"),
     title: t.exposeString("title"),
-    user: t.relation("author"),
+    content: t.exposeString("content"),
+    author: t.relation("author"),
+    likes: t.relation("likes"),
+    comments: t.relation("comments"),
+    likeCount: t.exposeInt("likeCount"),
+    bookmarkCount: t.exposeInt("bookmarkCount"),
+    createdAt: t.expose("createdAt", { type: "Datetime" }),
+    updatedAt: t.expose("updatedAt", { type: "Datetime" }),
   }),
 });
 
