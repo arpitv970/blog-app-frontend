@@ -19,9 +19,9 @@ datasource db {
 
 model User {
   id        Int        @id @default(autoincrement())
+  clerkId   String     @unique // Clerk user ID
   username  String     @unique
   email     String     @unique
-  password  String // Store hashed passwords
   blogs     Blog[] // Blogs written by the user
   bookmarks Bookmark[] // Blogs bookmarked by the user
   comments  Comment[] // Comments made by the user

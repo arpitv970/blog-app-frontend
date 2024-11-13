@@ -5,7 +5,6 @@ builder.prismaObject("User", {
     id: t.exposeID("id"),
     username: t.exposeString("username"),
     email: t.exposeString("email"),
-    password: t.exposeString("password"),
     blogs: t.relation("blogs"),
     bookmarks: t.relation("bookmarks"),
     comments: t.relation("comments"),
@@ -20,5 +19,20 @@ builder.queryField("users", (t) =>
     type: ["User"],
     resolve: (query, _parent, _args, _ctx, _info) =>
       prisma.user.findMany({ ...query }),
+  }),
+);
+
+builder.queryField("me", (t) =>
+  t.prismaField({
+    type: "User",
+    resolve: (query, _parent, _args, _ctx, _info) => {
+      const { user } = _ctx;
+
+      if (!user) {
+        throw new Error("User is not authenticated");
+      }
+
+      return user; // Return the authenticated user
+    },
   }),
 );
