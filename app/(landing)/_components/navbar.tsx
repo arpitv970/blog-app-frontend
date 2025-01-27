@@ -18,7 +18,7 @@ export const Navbar = () => {
             <Link href={"/feedback"}>Feedback</Link>
           </Button>
           <Button variant={"default"}>
-            <Link href={"/dashboard"}>Blogs</Link>
+            <Link href={"/dashboard"}>Sign In</Link>
           </Button>
         </div>
       </MaxWidthWrapper>
