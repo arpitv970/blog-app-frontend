@@ -12,7 +12,7 @@ const LandingHomePage = () => {
       <section className="relative py-24 sm:py-32">
         <MaxWidthWrapper>
           <div className="relative mx-auto text-center flex flex-col items-center gap-10">
-            <div>
+            <div className="font-serif font-black tracking-wide">
               <H1>
                 <span>Insights that fuel curiosity,</span>
                 <br />
