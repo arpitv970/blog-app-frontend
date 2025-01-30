@@ -11,7 +11,9 @@ export const handleSignIn = async () => {
 };
 
 export const handleSignOut = async () => {
-  await signOut();
+  await signOut({
+    redirectTo: "/",
+  });
 };
 
 export const getUser = async (): Promise<User | null> => {
