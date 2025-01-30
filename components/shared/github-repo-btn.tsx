@@ -1,5 +1,4 @@
 import { GithubIcon } from "lucide-react";
-import { Separator } from "@radix-ui/react-separator";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -14,7 +13,10 @@ export const GithubRepoBtn: React.FC<IGithubRepoBtn> = ({
   children,
 }) => {
   return (
-    <Link target="_blank" href={"https://github.com/arpitv970/blog-app"}>
+    <Link
+      target="_blank"
+      href={"https://github.com/arpitv970/blog-app-frontend"}
+    >
       <Button
         size={children ? "default" : "icon"}
         className={cn(
